@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <EditText
+        android:id="@+id/editContent"
+        android:layout_width="255dp"
+        android:layout_height="260dp"
+        android:text="Idea灵感"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="98dp"
+        android:layout_height="293dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButton28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="商机"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="246dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="编程"
+                app:layout_constraintTop_toTopOf="@+id/radioButton28"
+                tools:layout_editor_absoluteX="121dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="句词"
+                app:layout_constraintTop_toTopOf="@+id/radioButton29"
+                tools:layout_editor_absoluteX="230dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="建模"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="观察"
+                app:layout_constraintTop_toTopOf="@+id/radioButton31"
+                tools:layout_editor_absoluteX="109dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="奇物类"
+                app:layout_constraintTop_toTopOf="@+id/radioButton32"
+                tools:layout_editor_absoluteX="228dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="映射"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="品位"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="32dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="doRadioOnclick"
+                android:text="其它"
+                tools:layout_editor_absoluteX="74dp"
+                tools:layout_editor_absoluteY="71dp" />
+        </RadioGroup>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="89dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.006"
+        tools:text="20190219" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="65dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textColor="@color/design_default_color_primary_dark"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtDate"
+        tools:text="15:58" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doBtnOnclick"
+        android:text="保存"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <ImageView
+        android:id="@+id/view"
+        android:layout_width="178dp"
+        android:layout_height="229dp"
+        android:src="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></ImageView>
+
+
+</android.support.constraint.ConstraintLayout>
